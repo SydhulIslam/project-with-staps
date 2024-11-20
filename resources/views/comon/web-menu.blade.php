@@ -21,8 +21,8 @@
                     <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
                 </ul>
                 <p>
-                <!-- account btn --> <a href="{{route('login')}}" class="btn btn-white btn-outline-white py-3 px-4">Log In</a>
-				<!-- account btn --> <a href="{{route('registion')}}" class="btn btn-primary py-3 px-4">Sign Up</a>
+                <!-- account btn --> <a href="" class="btn btn-white btn-outline-white py-3 px-4">Log In</a>
+				<!-- account btn --> <a href="" class="btn btn-primary py-3 px-4">Sign Up</a>
                 </p>
 
             </div>

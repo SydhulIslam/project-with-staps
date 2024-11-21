@@ -1,95 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html
+  lang="en"
+  class="light-style customizer-hide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="/assets/assets/"
+  data-template="vertical-menu-template-free"
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sydhul</title>
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
 
+    <title>{{ isset($title) ? $title : 'Sydhul' }}</title>
 
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/css/vendor.bundle.base.css') }}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/jvectormap/jquery-jvectormap.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/owl-carousel-2/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/owl-carousel-2/owl.theme.default.min.css') }}">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="{{ asset('assets/assets/css/style.css') }}">
-    <!-- End layout styles -->
+    <meta name="description" content="" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('/assets/images/logo.png') }}" />
-</head>
+    <link rel="icon" type="image/x-icon" href="{{asset('/assets/assets/img/favicon/logo.png')}}" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="{{asset('/assets/assets/vendor/fonts/boxicons.css')}}" />
 
 
 
-<body>
-    <div class="container-scroller">
-        <div class="container-fluid page-body-wrapper full-page-wrapper">
-            <div class="row w-100 m-0">
-                <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
-                    <div class="card col-lg-4 mx-auto">
-                        <div class="card-body px-5 py-5">
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="{{asset('/assets/assets/vendor/css/core.css')}}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{asset('/assets/assets/vendor/css/theme-default.css')}}" class="template-customizer-theme-css" />
+
+    <link rel="stylesheet" href="{{asset('/assets/assets/css/demo.css')}}" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href=" {{asset('/assets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}} " />
+    <link rel="stylesheet" href=" {{asset('/assets/assets/vendor/libs/highlight/highlight.css')}} " />
+    <link rel="stylesheet" href=" {{asset('/assets/assets/vendor/libs/highlight/highlight-github.css')}} " />
+    <link rel="stylesheet" href=" {{asset('/assets/assets/vendor/libs/apex-charts/apex-charts.css')}} " />
 
 
 
 
 
+    <!-- Page CSS -->
+    <!-- Page -->
+    <link rel="stylesheet" href="{{asset('/assets/assets/vendor/css/pages/page-auth.css')}}   " />
+    <link rel="stylesheet" href="{{asset('/assets/assets/vendor/css/pages/page-account-settings.css')}}   " />
+    <link rel="stylesheet" href="{{asset('/assets/assets/vendor/css/pages/page-icons.css')}}   " />
+    <link rel="stylesheet" href="{{asset('/assets/assets/vendor/css/pages/page-misc.css')}}   " />
+    <!-- Helpers -->
+    <script src="{{asset('/assets/assets/vendor/js/helpers.js')}}"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="{{asset('/assets/assets/js/config.js')}}" ></script>
+  </head>
+
+  <body>
+
+  @yield("content")
 
 
 
-                            @yield('content')
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src=" {{asset('/assets/assets/vendor/libs/jquery/jquery.js')}} "></script>
+    <script src=" {{asset('/assets/assets/vendor/libs/popper/popper.js')}} "></script>
+    <script src=" {{asset('/assets/assets/vendor/js/bootstrap.js')}} "></script>
+    <script src=" {{asset('/assets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')}} "></script>
 
+    <script src=" {{asset('/assets/assets/vendor/libs/apex-charts/apexcharts.js')}} "></script>
 
+    <script src=" {{asset('/assets/assets/vendor/libs/masonry/masonry.js')}} "></script>
+    <script src=" {{asset('/assets/assets/vendor/libs/highlight/highlight.js')}} "></script>
 
+    <script src="  {{asset('/assets/assets/vendor/js/menu.js')}}  "></script>
+    <!-- endbuild -->
 
+    <!-- Vendors JS -->
 
+    <!-- Main JS -->
+    <script src="{{asset('/assets/assets/js/main.js')}}"></script>
 
+    <script src="{{asset('/assets/assets/js/dashboards-analytics.js')}}"></script>
+    <script src="{{asset('/assets/assets/js/extended-ui-perfect-scrollbar.js')}}"></script>
+    <script src="{{asset('/assets/assets/js/form-basic-inputs.js')}}"></script>
+    <script src="{{asset('/assets/assets/js/pages-account-settings-account.js')}}"></script>
+    <script src="{{asset('/assets/assets/js/ui-modals.js')}}"></script>
+    <script src="{{asset('/assets/assets/js/ui-popover.js')}}"></script>
+    <script src="{{asset('/assets/assets/js/ui-toasts.js')}}"></script>
 
+    <!-- Page JS -->
 
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- content-wrapper ends -->
-            </div>
-            <!-- row ends -->
-        </div>
-        <!-- page-body-wrapper ends -->
-    </div>
-    <!-- container-scroller -->
-
-
-
-    <!-- plugins:js -->
-    <script src="{{ asset('assets/assets/vendors/js/vendor.bundle.base.js') }}"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="{{ asset('assets/assets/vendors/chart.js/Chart.min.js') }}"></script>
-    <script src="{{ asset('assets/assets/vendors/progressbar.js/progressbar.min.js') }}"></script>
-    <script src="{{ asset('assets/assets/vendors/jvectormap/jquery-jvectormap.min.js') }}"></script>
-    <script src="{{ asset('assets/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
-    <script src="{{ asset('assets/assets/vendors/owl-carousel-2/owl.carousel.min.js') }}"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{{ asset('assets/assets/js/off-canvas.js') }}"></script>
-    <script src="{{ asset('assets/assets/js/hoverable-collapse.js') }}"></script>
-    <script src="{{ asset('assets/assets/js/misc.js') }}"></script>
-    <script src="{{ asset('assets/assets/js/settings.js') }}"></script>
-    <script src="{{ asset('assets/assets/js/todolist.js') }}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page -->
-    <script src="{{ asset('assets/assets/js/dashboard.js') }}"></script>
-    <!-- End custom js for this page -->
-
-</body>
-
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
 </html>

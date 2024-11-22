@@ -1,11 +1,14 @@
 <?php
 
-
+use App\Http\Controllers\AdminBlogController;
+use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\AdminUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\RoleController;
 
 Route::get('/', [WebsiteController::class, "index"])->name('home');
 Route::get('/home', [WebsiteController::class, "index"])->name('home');
@@ -23,3 +26,12 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->midd
 
 
 Route::get('/dashboard', [DashboardController::class, 'deshboard'])->name('deshboard');
+
+Route::resource('admin-blog', AdminBlogController::class);
+Route::resource('category', AdminCategoryController::class);
+Route::resource('user', AdminUserController::class);
+Route::get('/user-profile' , [AdminUserController::class, "profile"])->name('user.profile');
+
+Route::resource('permission', PermissionController::class);
+Route::resource('role', RoleController::class);
+

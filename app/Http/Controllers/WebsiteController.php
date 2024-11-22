@@ -7,10 +7,14 @@ use Illuminate\Http\Request;
 class WebsiteController extends Controller
 {
     public function index(){
-        return view("index", ["title" => "Sydhul : Home Page"]);
+        
+        $title = "Sydhul : Home Page";
+        return view("index", compact('title'));
     }
 
     public function blog(){
-        return view("blog", ["title" => "Sydhul : Blog Page"]);
+
+        $title = "Sydhul : Blog Page";
+        return view("blog", compact('title'));
     }
 }
